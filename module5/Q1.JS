@@ -5,7 +5,7 @@ function bankAccount()
  
 function deposit(amount)
     {
-        let balance=balance+amount;
+         balance=balance+amount;
         console.log(`Amount  of ₹${amount} deposited to bank account`)
         result=result+ `deposited amt ${amount}`+" "
     }
@@ -34,12 +34,12 @@ function deposit(amount)
 
     }
 
-return(withdraw(),getBalance(),getTransactionHistory(),deposit())  
-    
+return{deposit,withdraw,getBalance,getTransactionHistory}    
 }
 
-let PassBook = bankAccount;
-deposit(2000)
+let PassBook = bankAccount();
+PassBook.deposit(2000)
+PassBook.withdraw(500);
 
 
 
